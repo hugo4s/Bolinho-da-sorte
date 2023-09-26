@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #11043f, #b700ff);
+  background-size: 200% 200%;
+
+  animation: gradientAnimation 10s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+main {
+  background-color: white;
+  height: 42.4rem;
+  width: 42.8rem;
+  border-radius: 5px;
+  box-shadow: 0px 10px 50px black;
+  margin-bottom: 10rem;
+}
+
+.screen1 {
+  margin: 4.8rem 6.4rem 6.4rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.screen1 h2 {
+  color: #34355B;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  width: 25.8rem;
+  height: 5.8rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+.screen1 p {
+ color: #34355B;
+ font-family: 'DM Sans', sans-serif;
+ font-weight: regular;
+ font-size: 1.5rem;
+ margin-bottom: 2rem;
+}
+#tremer {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+#tremer:hover {
+  animation: tremer 0.3s ease-in-out infinite;
+}
+@keyframes tremer {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.screen2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.screen2 h2 {
+  color: #34355B;
+  font-size: 2.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  width: 29.7rem;
+  text-align: center;
+}
+@keyframes toFadeIn {
+  0% {
+    transform:
+    translateY(150px)
+    scale(0.1);
+
+  }
+
+  100% {
+    transform:
+    translateY(0px)
+    scale(1);
+  }
+}
+.screen2 p {
+  color: black;
+  padding: 1rem;
+  background: #E4EDF1;
+  font-size: 2.4rem;
+  width: 29.3rem;
+  height: 10.7rem;
+  font-family: 'Dancing Script';
+  font-weight: regular;
+  text-align: center;
+  box-shadow: 1px 1px 2px #817e7e;
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+  animation: toFadeIn 2s ease-in-out forwards;
+}
+.screen2 button {
+  padding: 1.6rem;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  background: #FF9500;
+  width: 17.4rem;
+  height: 5.2rem;
+  margin-top: 4rem;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: Bold;
+}
+
+.hide {
+  display: none;
+}
